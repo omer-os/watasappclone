@@ -1,0 +1,181 @@
+html, body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+    color: white;
+    font-family: sans-serif;
+    background-color: black;
+}
+
+
+main{
+    background-image: url(https://wallpapercave.com/wp/wp8092590.jpg);
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mainTop{
+    background-color: #171717;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.mainTopLeft{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.profileName{
+    font-size: 1rem;
+    font-weight: 700;
+}.lastSeen{
+    font-size: .7rem;
+    font-weight: 300;
+    color: rgb(189, 189, 189);
+    margin-top: 3px;
+}
+
+.profileImg{
+    background-image: url(https://images.unsplash.com/photo-1544502062-f82887f03d1c?ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwxNzg1NzU2fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80);
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+.mainTopRight{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.callImg{
+    width: 25px;
+}.threeDots{
+    height: 25px;
+    margin: 0 15px 0 7px;
+}
+
+
+
+
+.newMsgContainer{
+    background-color: #171717;
+    padding: 15px;
+}
+
+.in-newMsg-Con{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sticker{
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+    background-position: center;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/watsapp-clone-b1a12.appspot.com/o/sticker.png?alt=media&token=be0e7225-a742-459e-a409-b42be895c66c);}
+.msgInput{
+    width: 190px;
+    font-size: 1.1rem;
+    padding: 7px 10px;
+    background-color: #28282A;
+    border-radius: 10px;
+    color: white;
+    border: none;
+}
+.add{
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/watsapp-clone-b1a12.appspot.com/o/add.png?alt=media&token=1ce894c8-3670-40e8-a3eb-5f49ca9e6af1);
+}
+
+
+
+
+.microphone{
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+    background-position: center;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/watsapp-clone-b1a12.appspot.com/o/microphone.png?alt=media&token=d5f6f61f-0d58-46c9-9afb-2bbc748f3c1b);
+}
+
+
+
+
+/* messegesContainer */
+.messegesContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+
+.msg{
+    background-color: #3C3C3E;
+    margin: 10px;
+    margin-left: 30px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.masgTop{
+    color: tomato;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.msgBottom{
+    position: relative;
+}.msgBottom::after{
+    content: '2021/9/9 PM';
+    font-size: .8rem;
+    color: rgb(179, 179, 179); 
+    margin-left: 15px;
+    margin-top: 10px;
+}
+.msgContent{
+    font-size: 1rem;
+    display: inline;
+}
+
+.tringle{
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 15px solid #3C3C3E;
+    transform: rotate(-90deg);
+    position: absolute;
+    left: -27px;
+    bottom: 0px;
+}
+
+
+
+
+.stickersContainer{
+    background-color: teal;
+    width: 250px;
+    height: 100px;
+    position: fixed;
+    bottom: 66px;
+    right: 50px;
+}
