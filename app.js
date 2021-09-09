@@ -16,12 +16,12 @@ $('.soundRecoring').hide()
 
 
 $(".microphone").on('touchstart mousedown', function(e) {
-    $('.soundRecoring').show()
-    e.preventDefault(); //prevents further events from being dispatched
+    $('.soundRecoring').show("fast")
+    e.preventDefault();
 })
 
 $(".microphone").on('touchend mouseup', function(e) {
-    $('.soundRecoring').hide()
-    e.preventDefault(); //prevents further events from being dispatched
+    $('.soundRecoring').hide("fast")
+    e.preventDefault();
 })
 

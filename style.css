@@ -206,7 +206,19 @@ main{
 
 
 
-
+@media(min-width: 450px){
+    .in-newMsg-Con{
+        width: 70vw;
+        margin: auto;
+        gap: 20px;
+    }
+    .msgInput{
+        width: 80%;
+    }
+    .msg{
+        margin: 10px 20vw;
+    }
+}
 
 
 
