@@ -39,6 +39,16 @@
                 </div>
             </div>
 
+            <div class="mymsg">
+                <!-- <div class="masgTop">omar</div> -->
+                <div class="msgBottom">
+                    <div class="msgContent">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci labore accusamus illum.</div>
+                    <div class="mytringle"></div>
+                </div>
+            </div>
+
+            
+
 
         </div>
 
@@ -75,6 +85,24 @@
 
 
 
+        <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-database.js"></script>
+        <!-- <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-auth.js"></script> -->
+
+        <script>
+            const firebaseConfig = {
+                apiKey: "AIzaSyAFzp0nykVEGjetp5VsZimjgdrI1iYjGy0",
+                authDomain: "watsapp-clone-b1a12.firebaseapp.com",
+                databaseURL: "https://watsapp-clone-b1a12-default-rtdb.firebaseio.com",
+                projectId: "watsapp-clone-b1a12",
+                storageBucket: "watsapp-clone-b1a12.appspot.com",
+                messagingSenderId: "1089445968541",
+                appId: "1:1089445968541:web:f54829057043a5d35ff274"
+            };
+            firebase.initializeApp(firebaseConfig);
+            var db = firebase.database()
+        </script>
+      
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./app.js"></script>
 </body>
