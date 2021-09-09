@@ -1,5 +1,18 @@
-const userName = "omar"
-const userPassword = "12345"
+// show settings
+$('.settingsContainer').hide('slow')
+$('.threeDots').click(()=>{
+    $('.settingsContainer').toggle('slow')
+})
+const allSettings={
+    userName : prompt('enter your name : '),
+    userPassword : prompt('enter your password'),
+    profileColor : 'dark',
+    appTheme : 'dark',
+    autoScrollOption : true,
+    LimitCommingData : true
+}
+
+
 
 
 
@@ -36,18 +49,16 @@ $(".microphone").on('touchend mouseup', function(e) {
 db.ref('chats').on('child_added',(msg)=>{
     console.log(msg.val());
 
-    if(msg.val().name==userName && msg.val().userPassword==userPassword){
+    if(msg.val().name==allSettings.userName && msg.val().userPassword==allSettings.userPassword){
         $('.messegesContainer').append(`
             <div class="mymsg">
-            <div class="masgTop">${msg.val().name}</div>
             <div class="msgBottom">
                 <div class="msgContent">${msg.val().text}</div>
                 <div class="mytringle"></div>
             </div>
             <div class="msgDate">${msg.val().date}</div>
         </div>
-    `)
-    }
+    `)}
     else{
         $('.messegesContainer').append(`
             <div class="msg">
@@ -69,13 +80,15 @@ db.ref('chats').on('child_added',(msg)=>{
 
 
 $('.msgInput').keyup((a)=>{
-    if(a.key=="Enter"){
-        db.ref('chats').push({
-            name : userName,
-            text : $('.msgInput').val(),
-            date : new Date().toLocaleDateString(),
-            userPassword : userPassword
-        })
-        $('.msgInput').val('')
+    if($('.msgInput').val().length>=2){
+        if(a.key=="Enter"){
+            db.ref('chats').push({
+                name : allSettings.userName,
+                text : $('.msgInput').val().replace(/(<([^>]+)>)/gi, ""),
+                date : new Date().toLocaleDateString(),
+                userPassword : allSettings.userPassword
+            })
+            $('.msgInput').val('')
+        }
     }
 })
