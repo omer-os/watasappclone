@@ -145,6 +145,7 @@ main{
     margin-right: 30px;
     padding: 10px;
     border-radius: 5px;
+    over-flow: hidden;
 }
 .masgTop{
     color: tomato;
